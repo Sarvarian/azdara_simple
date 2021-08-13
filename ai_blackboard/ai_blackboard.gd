@@ -15,10 +15,10 @@ func _get_data() -> Dictionary:
 	return {}
 
 
-func get_key(key: String):
+func get_key(key):
 	return data[key]
 
 
-func set_key(key: int, value) -> void:
+func set_key(key, value) -> void:
 	data[key] = value
 	emit_signal("changed")
