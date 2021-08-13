@@ -1,0 +1,30 @@
+[gd_scene format=2]
+
+[node name="About" type="MarginContainer"]
+anchor_left = 0.1
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 432.0
+margin_bottom = 576.0
+focus_mode = 2
+text = "Design and program by Sarvarian.
+
+Some of technologies used for this project:
+	Godot 3
+	GIMP 2
+
+Others codes used in this project:
+
+	https://github.com/lawnjelly/smoothing-addon
+
+	https://github.com/MarcoFazioRandom/Virtual-Joystick-Godot"
+selection_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

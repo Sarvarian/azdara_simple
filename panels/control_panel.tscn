@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Joystick/Joystick.tscn" type="PackedScene" id=1]
+[ext_resource path="res://panels/joystick.gd" type="Script" id=2]
+[ext_resource path="res://panels_about/about.tscn" type="PackedScene" id=3]
+[ext_resource path="res://panels_settings/settings.tscn" type="PackedScene" id=4]
+
+[node name="ControlPanel" type="MarginContainer"]
+anchor_top = 0.6
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_right = 540.0
+margin_bottom = 384.0
+
+[node name="TabContainer" type="TabContainer" parent="PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 533.0
+margin_bottom = 377.0
+use_hidden_tabs_for_min_size = true
+
+[node name="Joystick" parent="PanelContainer/TabContainer" instance=ExtResource( 1 )]
+anchor_top = 0.0
+anchor_right = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 2 )
+joystick_mode = 2
+
+[node name="Settings" parent="PanelContainer/TabContainer" instance=ExtResource( 4 )]
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="About" parent="PanelContainer/TabContainer" instance=ExtResource( 3 )]
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
