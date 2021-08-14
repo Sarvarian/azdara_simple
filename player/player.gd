@@ -26,7 +26,7 @@ func _physics_process(delta : float) -> void:
 	if abs(rotang) > 0.001:
 		physics.apply_torque_impulse(rotang * rot_speed * delta)
 	
-	# Camera offset
+	# Camera offset_v and offset_h
 	var dir_vec = Vector2.RIGHT.rotated(physics.rotation)
 	camera.offset_v = dir_vec.y
 	camera.offset_h = dir_vec.x
