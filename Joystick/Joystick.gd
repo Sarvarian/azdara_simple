@@ -46,7 +46,6 @@ export(VisibilityMode) var visibility_mode := VisibilityMode.ALWAYS
 onready var _background := $Background
 onready var _handle := $Background/Handle
 onready var _original_color : Color = _handle.self_modulate
-onready var _original_position : Vector2 = _background.rect_position
 
 var _touch_index :int = -1
 
@@ -93,7 +92,7 @@ func _reset():
 	is_working = false
 	output = Vector2.ZERO
 	_handle.self_modulate = _original_color
-	_background.rect_position = _original_position
+	_background.rect_position = (rect_size / 2) - (_background.rect_size / 2)
 	_reset_handle()
 
 func _is_inside_control_circle(global_position: Vector2, control: Control) -> bool:
