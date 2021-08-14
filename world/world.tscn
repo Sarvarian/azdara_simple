@@ -1,7 +1,80 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/icon.png" type="Texture" id=2]
 
 [node name="World" type="Node"]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="icon" type="Sprite" parent="Node"]
+position = Vector2( -109.048, 542.515 )
+texture = ExtResource( 2 )
+
+[node name="icon2" type="Sprite" parent="Node"]
+position = Vector2( 603.695, 410.761 )
+texture = ExtResource( 2 )
+
+[node name="icon3" type="Sprite" parent="Node"]
+position = Vector2( 502.101, 202.811 )
+texture = ExtResource( 2 )
+
+[node name="icon4" type="Sprite" parent="Node"]
+position = Vector2( 292.564, 467.907 )
+texture = ExtResource( 2 )
+
+[node name="icon5" type="Sprite" parent="Node"]
+position = Vector2( -140.796, 213.923 )
+texture = ExtResource( 2 )
+
+[node name="icon6" type="Sprite" parent="Node"]
+position = Vector2( 281.452, -133.718 )
+texture = ExtResource( 2 )
+
+[node name="icon7" type="Sprite" parent="Node"]
+position = Vector2( 559.248, 39.3088 )
+rotation = 0.248064
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+
+[node name="icon8" type="Sprite" parent="Node"]
+position = Vector2( 163.985, 185.35 )
+rotation = -1.0472
+texture = ExtResource( 2 )
+
+[node name="icon9" type="Sprite" parent="Node"]
+position = Vector2( 95.7264, 712.367 )
+rotation = -1.0472
+texture = ExtResource( 2 )
+
+[node name="icon10" type="Sprite" parent="Node"]
+position = Vector2( 570.359, 634.584 )
+rotation = -1.0472
+texture = ExtResource( 2 )
+
+[node name="icon11" type="Sprite" parent="Node"]
+position = Vector2( 278.277, 779.038 )
+rotation = -1.0472
+texture = ExtResource( 2 )
+
+[node name="icon12" type="Sprite" parent="Node"]
+position = Vector2( 519.562, 1009.21 )
+rotation = -1.0472
+texture = ExtResource( 2 )
+
+[node name="icon13" type="Sprite" parent="Node"]
+position = Vector2( 813.232, 817.135 )
+rotation = -1.0472
+texture = ExtResource( 2 )
+
+[node name="icon14" type="Sprite" parent="Node"]
+position = Vector2( -188.418, 937.778 )
+rotation = 1.57079
+texture = ExtResource( 2 )
+
+[node name="icon15" type="Sprite" parent="Node"]
+position = Vector2( -288.425, 691.731 )
+rotation = -1.01292
+texture = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]

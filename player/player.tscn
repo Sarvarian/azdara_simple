@@ -16,6 +16,7 @@ target = NodePath("../RigidBody2D")
 flags = 15
 
 [node name="Camera2D" type="Camera2D" parent="Smoothing2D"]
+current = true
 smoothing_enabled = true
 
 [node name="Sprite" type="Sprite" parent="Smoothing2D"]
