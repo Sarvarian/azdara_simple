@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://create_new_game/create_new_game.gd" type="Script" id=1]
+
+[node name="CreateNewGame" type="PanelContainer"]
+anchor_left = 0.1
+anchor_top = 0.05
+anchor_right = 0.9
+anchor_bottom = 0.95
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 425.0
+margin_bottom = 857.0
+
+[node name="Title" type="Label" parent="VBox"]
+margin_right = 418.0
+margin_bottom = 14.0
+text = "Create A New Game"
+align = 1
+valign = 1
+
+[node name="GameName" type="HBoxContainer" parent="VBox"]
+margin_top = 18.0
+margin_right = 418.0
+margin_bottom = 42.0
+
+[node name="Label" type="Label" parent="VBox/GameName"]
+margin_top = 5.0
+margin_right = 38.0
+margin_bottom = 19.0
+text = "Name"
+
+[node name="LineEdit" type="LineEdit" parent="VBox/GameName"]
+margin_left = 42.0
+margin_right = 418.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+max_length = 64
+clear_button_enabled = true
+
+[node name="Seed" type="HBoxContainer" parent="VBox"]
+margin_top = 46.0
+margin_right = 418.0
+margin_bottom = 70.0
+
+[node name="Label" type="Label" parent="VBox/Seed"]
+margin_top = 5.0
+margin_right = 31.0
+margin_bottom = 19.0
+text = "Seed"
+
+[node name="LineEdit" type="LineEdit" parent="VBox/Seed"]
+margin_left = 35.0
+margin_right = 418.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+editable = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+
+[node name="Submit" type="Button" parent="VBox"]
+margin_top = 74.0
+margin_right = 418.0
+margin_bottom = 94.0
+text = "Submit"
+
+[connection signal="text_changed" from="VBox/GameName/LineEdit" to="." method="_on_game_name_text_changed"]
+[connection signal="pressed" from="VBox/Submit" to="." method="_on_Submit_pressed"]

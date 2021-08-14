@@ -28,12 +28,24 @@ _global_script_classes=[ {
 "class": "Joystick",
 "language": "GDScript",
 "path": "res://Joystick/Joystick.gd"
+}, {
+"base": "Node",
+"class": "MainNode",
+"language": "GDScript",
+"path": "res://main.gd"
+}, {
+"base": "Object",
+"class": "SaveObject",
+"language": "GDScript",
+"path": "res://save_object/save_object.gd"
 } ]
 _global_script_class_icons={
 "AI_BehaviorTree": "",
 "AI_Blackboard": "",
 "AI_Node": "",
-"Joystick": ""
+"Joystick": "",
+"MainNode": "",
+"SaveObject": ""
 }
 
 [application]
@@ -41,6 +53,10 @@ _global_script_class_icons={
 config/name="azdara"
 run/main_scene="res://main.tscn"
 config/icon="res://assets/player.png"
+
+[debug]
+
+settings/stdout/verbose_stdout=true
 
 [display]
 

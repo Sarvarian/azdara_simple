@@ -4,6 +4,7 @@ extends Node
 const move_speed : int = 4_000
 const rot_speed : int = 100_000
 
+onready var main : MainNode = get_node("/root/Main") as MainNode
 onready var physics : RigidBody2D = $RigidBody2D
 onready var camera : Camera2D = $Smoothing2D/Camera2D
 
@@ -25,17 +26,15 @@ func _physics_process(delta : float) -> void:
 	if abs(rotang) > 0.001:
 		physics.apply_torque_impulse(rotang * rot_speed * delta)
 	
-	# Camera offcet
+	# Camera offset
 	var dir_vec = Vector2.RIGHT.rotated(physics.rotation)
 	camera.offset_v = dir_vec.y
 	camera.offset_h = dir_vec.x
 	
+	# Camera offset
+	if main:
+		camera.offset.y = main.control_panel.rect_global_position.y
 	
-	
-	pass
-
-
-func _ready() -> void:
 	pass
 
 
