@@ -71,4 +71,4 @@ margin_bottom = 94.0
 text = "Submit"
 
 [connection signal="text_changed" from="VBox/GameName/LineEdit" to="." method="_on_game_name_text_changed"]
-[connection signal="pressed" from="VBox/Submit" to="." method="_on_Submit_pressed"]
+[connection signal="pressed" from="VBox/Submit" to="." method="_on_Submit_pressed" flags=3]
