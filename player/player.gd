@@ -33,7 +33,7 @@ func _physics_process(delta : float) -> void:
 	
 	# Camera offset
 	if main:
-		camera.offset.y = main.control_panel.rect_global_position.y
+		camera.offset.y = main.control_panel.rect_size.y /2
 	
 	pass
 
