@@ -21,7 +21,21 @@ func _physics_process(_delta) -> void:
 	pass
 
 
+func check_fps_balance() -> void:
+	if fps_p < fps_pp and Engine.iterations_per_second > 10:
+		Engine.iterations_per_second -= 1
+	elif Engine.iterations_per_second < 60 and Engine.iterations_per_second * 1.5 < fps_p:
+		Engine.iterations_per_second += 1
+	pass
+
+
 func update_labels() -> void:
+	check_fps_balance()
 	$Label2.text = "%.2f" % fps_p
 	$Label4.text = "%.2f" % fps_pp
+	$"../Engine/Label2".text = String(Engine.iterations_per_second)
 	pass
+
+
+
+
