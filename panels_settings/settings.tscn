@@ -60,16 +60,29 @@ margin_right = 432.0
 margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="VBox/FPSMeter/Engine"]
-margin_right = 194.0
+margin_right = 148.0
 margin_bottom = 14.0
-text = "Engine.iterations_per_second: "
+text = "iterations_per_second: "
 
 [node name="Label2" type="Label" parent="VBox/FPSMeter/Engine"]
-margin_left = 198.0
-margin_right = 198.0
+margin_left = 152.0
+margin_right = 209.0
 margin_bottom = 14.0
+size_flags_horizontal = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label3" type="Label" parent="VBox/FPSMeter/Engine"]
+margin_left = 213.0
+margin_right = 370.0
+margin_bottom = 14.0
+text = "get_frames_per_second: "
+
+[node name="Label4" type="Label" parent="VBox/FPSMeter/Engine"]
+margin_left = 374.0
+margin_right = 432.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
 
 [connection signal="timeout" from="VBox/FPSMeter/Timer" to="VBox/FPSMeter/FPS" method="update_labels" flags=3]
