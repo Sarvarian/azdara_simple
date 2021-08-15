@@ -12,7 +12,7 @@ func _process(_delta: float) -> void:
 
 
 var last_pp : int = 0
-var fps_pp : int = 0
+var fps_pp : float = 0
 
 func _physics_process(_delta) -> void:
 	var now : int = OS.get_ticks_usec()

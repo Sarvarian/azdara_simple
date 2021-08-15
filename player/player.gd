@@ -12,10 +12,10 @@ onready var camera : Camera2D = $Smoothing2D/Camera2D
 func _physics_process(delta : float) -> void:
 	# Movement
 	var move_dir := Vector2.ZERO
-	move_dir.x += Input.get_action_strength("move_right")
-	move_dir.x -= Input.get_action_strength("move_left")
-	move_dir.y -= Input.get_action_strength("move_up")
-	move_dir.y += Input.get_action_strength("move_down")
+	move_dir.x += Input.get_action_strength("player1_move_right")
+	move_dir.x -= Input.get_action_strength("player1_move_left")
+	move_dir.y -= Input.get_action_strength("player1_move_up")
+	move_dir.y += Input.get_action_strength("player1_move_down")
 	if move_dir.length_squared() > 1:
 		move_dir = move_dir.normalized()
 	physics.apply_central_impulse(move_dir * move_speed * delta)
