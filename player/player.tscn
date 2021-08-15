@@ -20,6 +20,7 @@ current = true
 smoothing_enabled = true
 
 [node name="Sprite" type="Sprite" parent="Smoothing2D"]
+rotation = 1.5708
 texture = ExtResource( 2 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
