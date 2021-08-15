@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://addons/smoothing/smoothing_2d.gd" type="Script" id=1]
-[ext_resource path="res://assets/player.png" type="Texture" id=2]
+[ext_resource path="res://assets/pac.png" type="Texture" id=2]
 [ext_resource path="res://player/player.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -17,10 +17,11 @@ flags = 15
 
 [node name="Camera2D" type="Camera2D" parent="Smoothing2D"]
 current = true
+zoom = Vector2( 2, 2 )
 smoothing_enabled = true
 
 [node name="Sprite" type="Sprite" parent="Smoothing2D"]
-rotation = 1.5708
+scale = Vector2( 0.18, 0.18 )
 texture = ExtResource( 2 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
